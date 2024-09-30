@@ -3,89 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R-Grid-View</title>
-    <style>
-       * {
-        box-sizing: border-box;
-       }
-       .row::after {
-        content: "";
-        clear: both;
-        display: table;
-       }
-       [class*="col-"] {
-        float: left;
-        padding: 15px;
-       }
-       .col-1 {width: 8.33%;}
-       .col-2 {width: 16.66%;}
-       .col-3 {width: 25%;}
-       .col-4 {width: 33.33%;}
-       .col-5 {width: 41.66%;}
-       .col-6 {width: 50%;}
-       .col-7 {width: 58.33%;}
-       .col-8 {width: 66.66%;}
-       .col-9 {width: 75%;}
-       .col-10 {width: 83.33%;}
-       .col-11 {width: 91.66%;}
-       .col-12 {width: 100%;}
-       html {
-        font-family: "Lucida Sans", sans-serif;
-       }
-
-      .header {
-        background-color: #9933cc;
-        color: #ffffff;
-        padding: 15px;
-       }
-
-      .menu ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-     .menu li {
-       padding: 8px;
-       margin-bottom: 7px;
-       background-color: #33b5e5;
-       color: #ffffff;
-       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      }
-
-    .menu li:hover {
-      background-color: #0099cc;
-     }
-    </style>
+     
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Elijah_Malay; Your all-in-one booking app</title>
 </head>
 <body>
-    <div class="header">
-  <h1>Chania</h1>
-</div>
+    <div class="container">
+        <header class="header">
+            <img src="./img/logo.png" alt="trillo logo" class="logo">
+            <form action="#" class="search">
+                <input type="text" class="search_input" placeholder="Search hotel">
+                <button class="search_button">
+                    <svg class="search_icon">
+                       <img src="./img/SVG/magnifying-glass.svg" alt="svg image">
+                    </svg>
+                </button>
+            </form>
 
-<div class="row">
-  <div class="col-3 menu">
-    <ul>
-      <li>The Flight</li>
-      <li>The City</li>
-      <li>The Island</li>
-      <li>The Food</li>
-    </ul>
-  </div>
+            <nav class="user-nav">
+                <div class="user-nav_icon_box">
+                    <svg class="user-nav_icon">
+                        <img src="./img/SVG/bookmark.svg" alt="">
+                    </svg>
+                      <span class="user-nav_notafication">7</span>
+                </div>
+                <div class="user-nav_icon_box">
+                    <svg class="user-nav_icon">
+                        <img src="./img/SVG/chat.svg" alt="">
+                    </svg>
+                    <span class="user-nav_notafication">15</span>
+                </div>
+                <div class="user-nav_user">
+                    <img src="./img/elijah.jpg" alt="user photo" class="user-photo">
+                    <span class="user-nav_user-name">Elijah Malay</span>
+                </div>
+            </nav>
+        </header>
 
-  <div class="col-9">
-    <h1>The City</h1>
-    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-    <p>Resize the browser window to see how the content respond to the resizing.</p>
-    <p>The example above is fine if the web page only contains two columns.
 
-        However, we want to use a responsive grid-view with 12 columns, to have more control over the web page.
-        
-        First we must calculate the percentage for one column: 100% / 12 columns = 8.33%.
-        
-        Then we make one class for each of the 12 columns, class="col-" and a number defining how many columns the section should span:</p>
-   <p>The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other elements will be placed as if the columns do not exist. To prevent this, we will add a style that clears the flow:</p>
-  </div>
-</div>
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav_item side-nav_item--active">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <img src="./img/SVG/home.svg" alt="house">
+                            </svg>
+                            <span class="span">Hotel</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <img src="./img/SVG/aircraft-take-off.svg" alt="flight">
+                            </svg>
+                            <span class="span">Flight</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <img src="./img/SVG/key.svg" alt="key">
+                            </svg>
+                            <span class="span">Car rental</span>
+                        </a>
+                    </li>
+                    <li class="side-nav_item">
+                        <a href="#" class="side-nav_link">
+                            <svg class="side-nav_icon">
+                                <img src="./img/SVG/map.svg" alt="map">
+                            </svg>
+                            <span class="span">Tours</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="legal">
+                    &copy; 2024 by Elijah_Malay. All rights reserved.
+                </div>
+            </nav>
+
+
+            
+            <main class="hotel-view">
+                <div class="gallery">
+                    <figure class="gallery_item">
+                        <img src="./img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery_photo">
+                    </figure>
+                    <figure class="gallery_item">
+                        <img src="./img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery_photo">
+                    </figure>
+                    <figure class="gallery_item">
+                        <img src="./img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery_photo">
+                    </figure>
+                </div>
+
+                <div class="overview">
+                    <h1 class="overview_heading">
+                        Hotel Las Palmas
+                    </h1>
+
+                    <div class="overview_stars">
+                        <svg class="overview_icon-star">
+                            <img src="./img/SVG/star.svg" alt="">
+                        </svg>
+                        <svg class="overview_icon-star">
+                            <img src="./img/SVG/star.svg" alt="">
+                        </svg>
+                        <svg class="overview_icon-star">
+                            <img src="./img/SVG/star.svg" alt="">
+                        </svg>
+                        <svg class="overview_icon-star">
+                            <img src="./img/SVG/star.svg" alt="">
+                        </svg>
+                        <svg class="overview_icon-star">
+                            <img src="./img/SVG/star.svg" alt="">
+                        </svg>
+                    </div>
+
+                    <div class="overview_location">
+                        <svg class="overview_icon-location">
+                           <img src="./img/location-pin.svg" alt="">
+                        </svg>
+                        <button class="btn-inline">Albufeira, Portugal</button>
+                    </div>
+
+                    <div class="overview_rating">
+                        <div class="overview_rating-average">8.6</div>
+                        <div class="overview_rating-count">429 votes</div>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <div class="description">
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+                        </p>
+                        <p class="paragraph">
+                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                        </p>
+                        <ul class="list">
+                            <li class="list_item">Close to the beach</li>
+                            <li class="list_item">Breakfast included</li>
+                            <li class="list_item">Free airport shuttle</li>
+                            <li class="list_item">Free wifi in all rooms</li>
+                            <li class="list_item">Air conditioning and heating</li>
+                            <li class="list_item">Pets allowed</li>
+                            <li class="list_item">We speak all languages</li>
+                            <li class="list_item">Perfect for families</li>
+                        </ul>
+                        <div class="recommend">
+                            <p class="recommend_count">
+                                Lucy and 3 other friends recommend this hotel.
+                            </p>
+                            <div class="recommend_friends">
+                                <img src="img/user-3.jpg" alt="Friend 1" class="recommend_photo">
+                                <img src="./img/user-2.jpg" alt="Friend 2" class="recommend_photo">
+                                <img src="img/user-5.jpg" alt="Friend 3" class="recommend_photo">
+                                <img src="img/user-6.jpg" alt="Friend 4" class="recommend_photo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-reviews">
+                        <figure class="review">
+                            <blockquote class="review_text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+                            </blockquote>
+                            <figcaption class="review_user">
+                                <img src="./img/elijah.jpg" alt="User 1" class="review_photo">
+                                <div class="review_user-box">
+                                    <p class="review_user-name">Elijah Malay</p>
+                                    <p class="review_user-date">Feb 23rd, 2017</p>
+                                </div>
+                                <div class="review_rating">7.8</div>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="review">
+                            <blockquote class="review_text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.
+                            </blockquote>
+                            <figcaption class="review_user">
+                                <img src="./img/woman.jpg" alt="User 1" class="review_photo">
+                                <div class="review_user-box">
+                                    <p class="review_user-name">Mary Thomas</p>
+                                    <p class="review_user-date">Sept 13th, 2017</p>
+                                </div>
+                                <div class="review_rating">9.3</div>
+                            </figcaption>
+                        </figure>
+
+                        <button class="btn-inline">Show all <span>&rarr;</span></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="cta">
+                    <h2 class="cta_book-now">
+                        Good news! We have 4 free rooms for your selected dates!
+                    </h2>
+                    <button class="btn">
+                        <span class="btn_visible">Book now</span>
+                        <span class="btn_invisible">Only 4 rooms left</span>
+                    </button>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
